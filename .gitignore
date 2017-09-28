@@ -8,6 +8,7 @@ target/
 .project
 .settings
 .springBeans
+spring-clazz.log
 
 ### IntelliJ IDEA ###
 .idea
