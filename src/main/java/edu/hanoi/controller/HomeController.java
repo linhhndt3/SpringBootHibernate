@@ -3,9 +3,6 @@ package edu.hanoi.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.view.UrlBasedViewResolver;
-import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
-import org.springframework.web.servlet.view.tiles3.TilesView;
 
 @Controller
 public class HomeController {
@@ -15,6 +12,14 @@ public class HomeController {
 		System.out.println("----- hello hanoi java clazz");
 		ModelAndView mv = new ModelAndView("index");
 		mv.addObject("message", "Hello Java Clazz");
+		return mv;
+	}
+	
+	@RequestMapping(value="/nguoi-dung")
+	public ModelAndView forUser() {
+		System.out.println("----- for user");
+		ModelAndView mv = new ModelAndView("index");
+		mv.addObject("message", "This is a protected page");
 		return mv;
 	}
 }
