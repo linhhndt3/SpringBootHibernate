@@ -7,13 +7,13 @@
 		<c:if test="${not empty error}">
 			<p>Sai tên đăng nhập hoặc mật khẩu</p>
 		</c:if>
-		<form method="post" >
+		<form method="post" action="http://localhost:8080/j_spring_security_check">
 			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 			<p>
-				<input type="text" >
+				<input type="text" name="username" id="username" placeholder="Username">
 			</p>
 			<p>
-				<input type="password" >
+				<input type="password" name="password" id="password" placeholder="Password" >
 			</p>
 			<p class="submit">
 				<input type="submit" name="commit" value="Login">
